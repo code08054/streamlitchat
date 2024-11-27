@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 
-st.title("Euphoria's HR Connect")
+st.title("Dibyendu's HR Connect")
 
 # Set OpenAI API key from Streamlit secrets
 client = OpenAI(api_key="")
@@ -13,7 +13,7 @@ if "openai_model" not in st.session_state:
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "system", "content": "You are a Mock HR Interviewer. You are based in India and planning to interview college pass out. You need to generate HR questions and validate user's answers. Always ask one question at a time. Always ask one question at a time and if answer is correct ask the next question in the same response. If user starts different discussion, bring them back to HR interview discussion."}]
-    st.session_state.messages.append({"role": "assistant", "content": "Hello, welcome to Euphoria, How are you today?"})
+    st.session_state.messages.append({"role": "assistant", "content": "Hello, welcome to DibsWOrld, How are you today?"})
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
